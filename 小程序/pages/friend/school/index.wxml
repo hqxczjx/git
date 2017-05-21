@@ -1,0 +1,7 @@
+<view>
+    <button>课陪</button>
+    <button>快递</button>
+    <button>代购</button>
+    <button>闲置</button>
+    <button>兼职</button>
+</view>

@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/friend/index",
+    "pages/friend/school/index",
+    "pages/friend/tree/index",
+    "pages/friend/find/index",
+    "pages/friend/me/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "0.0",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#bddd22",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/friend/school/index",
+      "text": "校帮",
+      "iconPath": "images/img1.jpg",
+      "selectedIconPath": "images/img1.jpg"
+    },{
+      "pagePath": "pages/friend/tree/index",
+      "text": "树洞",
+      "iconPath": "images/img1.jpg",
+      "selectedIconPath": "images/img1.jpg"
+    },{
+      "pagePath": "pages/friend/index",
+      "text": "总览",
+      "iconPath": "images/img1.jpg",
+      "selectedIconPath": "images/img1.jpg"
+    },{
+      "pagePath": "pages/friend/find/index",
+      "text": "发现",
+      "iconPath": "images/img1.jpg",
+      "selectedIconPath": "images/img1.jpg"
+    },{
+      "pagePath": "pages/friend/me/index",
+      "text": "我的",
+      "iconPath": "images/img1.jpg",
+      "selectedIconPath": "images/img1.jpg"
+    }]
+  }
+}

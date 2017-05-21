@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>demo</title>
+    <link href="main.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.2.6/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="vue.js"></script>
+</head>
+<body>
+<header>
+    <a><span class="glyphicon glyphicon-arrow-left"></span></a>
+    <span>朋友圈</span>
+    <span style="float: right;margin-right: 10px;" class="glyphicon glyphicon-camera"></span>
+</header>
+<main id="app">
+    <div style="margin-bottom: 30px">
+        <img src="images/title.jpg" style="width: 100%">
+        <div style="position: absolute;right: 0;top: 250px;">
+            <span>曾家兴</span>
+            <img src="images/touxiang.jpg" style="width: 80px;">
+        </div>
+    </div>
+    <div>
+        <custom></custom>
+        <custom></custom>
+        <custom></custom>
+        <custom></custom>
+        <custom></custom>
+    </div>
+</main>
+</body>
+<script>
+    Vue.component('custom',{
+        data:function () {
+            return {
+                selectShow:false,
+                selectZan:false,
+                message:['赞'],
+                inputShow:false,
+                pShow:false,
+                speak:''
+            };
+        },
+        props:['num'],
+        template:`<div style="position: relative;border-bottom: 1px solid gray;padding-bottom: 10px;">
+            <img src="images/img1.jpg" style="width: 30px;margin-left: 10px;float: left">
+            <div style="display: inline-block;width: 80%">
+                <a>哈哈</a>
+                <p>哈哈哈哈</p>
+                <img src="images/img1.jpg" style="width: 200px;height: 100px;">
+                <div style="padding-bottom: 10px;">
+                    <span>10分钟前</span>
+                    <button style="float: right" @click="selectShow = !selectShow"  >。。</button>
+                    <button style="float: right;" v-show="selectShow" @click="talk">评论</button>
+                    <button style="float: right;width: 50px;" v-show="selectShow" @click="changeZan" v-model="message">{{message[0]}}</button>
+                </div>
+                <div style="background-color: #eeeeee" v-show="selectZan">
+                <span class="glyphicon glyphicon-heart"></span>
+                <span>曾家兴 </span>
+                <p v-show="pShow">曾家兴:{{speak}}</p>
+                <input v-show="inputShow" type="text" style="width: 100%;" v-model="speak">
+</div>
+            </div>
+        </div>`,
+        methods:{
+            changeZan:function () {
+                this.selectZan = !this.selectZan;
+                this.selectShow = false;
+                if(this.message == '赞'){
+                    this.message.splice(0,1,'取消');
+                }
+                else{
+                    this.message.splice(0,1,'赞');
+                }
+            },
+            talk:function () {
+                this.inputShow = !this.inputShow;
+                if(this.speak.length > 0){
+                    this.pShow = true;
+                }
+                else{
+                    this.pShow = false;
+                }
+            }
+        }
+    });
+    new Vue({
+        el:'#app'
+    });
+</script>
+</html>

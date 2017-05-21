@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view>
+<input disabled="true" value="{{fal}}" class="border-input" />
+<view>
+<button bindtap="btnClick9" style="width:33%;display:inline-block;">9</button>
+<button bindtap="btnClick8" style="width:33%;display:inline-block;">8</button>
+<button bindtap="btnClick7" style="width:33%;display:inline-block;">7</button>
+</view>
+<view>
+<button bindtap="btnClick6"n style="width:33%;display:inline-block;">6</button>
+<button bindtap="btnClick5" style="width:33%;display:inline-block;">5</button>
+<button bindtap="btnClick4" style="width:33%;display:inline-block;">4</button>
+</view>
+<view>
+<button bindtap="btnClick3" style="width:33%;display:inline-block;">3</button>
+<button bindtap="btnClick2" style="width:33%;display:inline-block;">2</button>
+<button bindtap="btnClick1" style="width:33%;display:inline-block;">1</button>
+</view>
+<view>
+<button id="a1" bindtap="yun" style="width:33%;display:inline-block;">+</button>
+<button id="a2" bindtap="yun" style="width:33%;display:inline-block;">-</button>
+<button bindtap="last" style="width:33%;display:inline-block;">=</button>
+</view>
+</view>
