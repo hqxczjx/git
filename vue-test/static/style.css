@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    /*瀑布流不能设*/
+    height: 100%;
+}
+
+
+/*fullPage*/
+
+html {
+    overflow: hidden;
+}
+
+
+/*ext-output*/
+
+.text-output {
+    display: inline-block;
+}
+
+
+/*full-page*/
+
+.scroll {
+    position: fixed;
+    width: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroll>i {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #3a3a3a;
+    border-radius: 50%;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.scroll>i:hover {
+    background-color: #3a3a3a;
+}
+
+.scroll>.active {
+    background-color: #3a3a3a;
+}
+
+.page {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+
+/*water-fall*/
+
+.water-fall {
+    margin: 0 auto;
+}
+
+.water-fall::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.col {
+    /* display: inline-block; */
+    float: left;
+    padding: 5px;
+}
+
+.col-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+
+/*i-want-to*/
+
+div.i-want-to {
+    position: relative;
+}
+
+div.i-want-to>textarea {
+    position: absolute;
+    bottom: 33%;
+    left: 1.5%;
+    resize: none;
+    width: 19%;
+    height: 12%;
+    font-size: 15px;
+    border: 1px solid transparent;
+}
+
+canvas.i-want-to {
+    width: 50%;
+}
+
+.img-show {
+    z-index: 99;
+    background-color: rgba(58, 58, 58, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.img-show span {
+    float: right;
+    /* padding-top: 5px; */
+    width: 35px;
+    height: 35px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 60px;
+    z-index: 999;
+    cursor: default;
+    transform: rotate(45deg);
+}
+
+
+/* .img-show i::before {
+    content: '——';
+    position: absolute;
+    transform: rotate(45deg);
+    color: #ffffff;
+}
+
+.img-show i::after {
+    content: '——';
+    position: absolute;
+    transform: rotate(135deg);
+    color: #ffffff;
+} */
+
+.img-show img {
+    display: block;
+    width: 300px;
+    /* margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+
+/* @media (max-width: 600px) {
+    .img-show img {
+        width: 100%;
+    }
+} */
